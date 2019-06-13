@@ -43,5 +43,8 @@ form {
 	padding: 0;
 }
 strong {
-	margin-bottom: 1.15rem;
+	margin: 2rem !important;
+}
+.cart-info {
+	margin-top: 2rem 0;
 }
