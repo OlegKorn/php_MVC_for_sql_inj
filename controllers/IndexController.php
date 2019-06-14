@@ -1,30 +1,22 @@
 <?php
 
 
-include_once '../models/CategoriesModel.php';
+	include_once '../models/CategoriesModel.php';
 
-function testAction() {
-  echo "IndexController.php > testAction";
-}
+	function testAction() {
+	  echo "IndexController.php > testAction";
+	}
 
-function indexAction($smarty) {
-    
-    $rsCategories = getAllMainCatsWithParents();
+	function indexAction($smarty) {
+	    
+	    $rsCategories = getAllMainCatsWithChildren();
 
-	$smarty->assign('pageTitle', 'Главная страница сайта');
+		$smarty->assign('pageTitle', 'Главная страница сайта');
+		$smarty->assign('rsCategories', $rsCategories);
 
-	loadTemplate($smarty, 'header');
-	loadTemplate($smarty, 'left');
-	loadTemplate($smarty, 'index');
-}
+		loadTemplate($smarty, 'header');
+		loadTemplate($smarty, 'left');
+		loadTemplate($smarty, 'index');
+	}
 
-function getAllMainCatsWithChildren(){
-  global $sql, $db, $rs;
-
-  $sql = "SELECT * FROM categories WHERE parent_id = 0";
-  $rs = $db->query($sql);
-  while ($row = $rs->fetch_assoc()) {
-    echo "id =" . $row['id'] . "<br />";
-  }
-}
 ?>

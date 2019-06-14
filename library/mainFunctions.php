@@ -19,10 +19,21 @@
   function d($value = null, $die = 1) {
 
     echo 'Debug: <br /> <pre>';
-	print_r($value);
-	echo '</pre>';
+	  print_r($value);
+	  echo '</pre>';
 
-	if($die) die;
+	  if($die) die;
+  }
+
+  function createSmartyRsArray($rs) {
+    if(!$rs) return false;
+    
+    $smartyRs = array();
+    while($row = mysqli_fetch_assoc(false)) {
+      $smartRs[] = $row;
+    }
+
+    return $smartRs;
   }
 
   ?>
