@@ -3,7 +3,7 @@
   $dblocation = "localhost";
   $dbname = "LOCAL.SHOP";
   $dbuser = "root";
-  $dbpasswd = "oleg1811";
+  $dbpasswd = " ";
 
   global $db;
   //connect to DB
