@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 03:12:09
+/* Smarty version 3.1.33, created on 2019-06-17 16:55:28
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d02f469d6c065_90802828',
+  'unifunc' => 'content_5d07a9e06c1ec8_10364799',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1560474728,
+      1 => 1560783327,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d02f469d6c065_90802828 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d07a9e06c1ec8_10364799 (Smarty_Internal_Template $_smarty_tpl) {
 ?><body>
 
     <section>
@@ -31,7 +31,22 @@ function content_5d02f469d6c065_90802828 (Smarty_Internal_Template $_smarty_tpl)
             <div id="left" class="col-12 text-center">
               <h3>Меню сайта</h3>
               <ul class="nav flex-column">
-                <li>
+                
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsCategories']->value, 'item');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+?>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</a>
+                  </li>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+                <!--<li>
                   <a class="nav-link bold" href="#">Playboy</a>
                 </li>
                 <li class="nav-item">
@@ -51,7 +66,7 @@ function content_5d02f469d6c065_90802828 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Blond</a>
-                </li>
+                </li> -->
 
                 <form>
                   <strong>Авторизация</strong>

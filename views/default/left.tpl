@@ -8,7 +8,14 @@
             <div id="left" class="col-12 text-center">
               <h3>Меню сайта</h3>
               <ul class="nav flex-column">
-                <li>
+                
+                {foreach $rsCategories as $item}
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">{$item['name']}</a>
+                  </li>
+                {/foreach}
+
+                <!--<li>
                   <a class="nav-link bold" href="#">Playboy</a>
                 </li>
                 <li class="nav-item">
@@ -28,7 +35,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Blond</a>
-                </li>
+                </li> -->
 
                 <form>
                   <strong>Авторизация</strong>

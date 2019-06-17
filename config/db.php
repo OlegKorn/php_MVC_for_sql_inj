@@ -5,7 +5,7 @@
     $dblocation = "localhost";
     $dbname = "LOCAL.SHOP";
     $dbuser = "root";
-    $dbpasswd = "oleg1811";
+    $dbpasswd = "";
   
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
 
