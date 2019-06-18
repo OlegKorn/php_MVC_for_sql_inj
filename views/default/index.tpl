@@ -1,60 +1,21 @@
-     <div class="col-md-8 col-sm-12">
-            <div id="center" class="col-12 text-center">
-            <h1 class="text-center">my shop</h1>
+      <div class="col-md-8 col-sm-12">
+        <div id="center" class="col-12 text-center">
+          <h1 class="text-center">my shop</h1>
 
-            <!--FOTOS ITEMS-->
-            <div class="row text-center foto-items">
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
+      
 
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
+          <!--FOTOS ITEMS-->
+          <div class="row text-center foto-items">
 
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
+          {foreach $rsProducts as $item name=products}
+
+            <div class="col-md-4 col-sm-12 foto-item">
+              <img src="/images/products/{$item['image']}" width="100" alt="">
+              <a href="/product/{$item['id']}/">{$item['name']}</a>
             </div>
 
-            <div class="row text-center foto-items">
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
+          {/foreach}
 
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0004.jpg" alt="">
-                <a href="">link</a>
-              </div>
-            </div>
-
-            <div class="row text-center foto-items">
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 foto-item">
-                <img src="http://ego04.manworldmediacdn.com/wp-content/uploads/2019/04/AnaMaria41_P0005.jpg" alt="">
-                <a href="">link</a>
-              </div>
-            </div>
-
-            </div>
           </div>
 
         </div>

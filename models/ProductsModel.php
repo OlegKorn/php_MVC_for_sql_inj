@@ -13,7 +13,6 @@ function getLastProducts($limit=null) {
     if ($limit) {
     	$sql .= " LIMIT {$limit}";
     }
-    d($sql);
 
     $rs = mysqli_query($db, $sql);
 
