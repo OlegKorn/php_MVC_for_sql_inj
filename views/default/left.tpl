@@ -10,8 +10,18 @@
               <ul class="nav flex-column">
                 
                 {foreach $rsCategories as $item}
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">{$item['name']}</a>
+                  <li>
+                    <a class="nav-link bold" href="#">{$item['name']}</a>
+
+                    {if isset($item['children'])}
+
+                      {foreach $item['children'] as $itemChild}
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">{$itemChild['name']}</a><br/>
+                          </li>
+                      {/foreach}
+
+                    {/if}
                   </li>
                 {/foreach}
 

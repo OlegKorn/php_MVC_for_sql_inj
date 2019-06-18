@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-17 16:55:28
+/* Smarty version 3.1.33, created on 2019-06-18 03:01:36
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d07a9e06c1ec8_10364799',
+  'unifunc' => 'content_5d0837f0dd5b98_28167302',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1560783327,
+      1 => 1560819695,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d07a9e06c1ec8_10364799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0837f0dd5b98_28167302 (Smarty_Internal_Template $_smarty_tpl) {
 ?><body>
 
     <section>
@@ -37,9 +37,27 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                  <li>
+                    <a class="nav-link bold" href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a>
+
+                    <?php if (isset($_smarty_tpl->tpl_vars['item']->value['children'])) {?>
+
+                      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['item']->value['children'], 'itemChild');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->value) {
+?>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+</a><br/>
+                          </li>
+                      <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+                    <?php }?>
                   </li>
                 <?php
 }
