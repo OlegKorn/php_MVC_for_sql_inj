@@ -10,7 +10,7 @@
           {foreach $rsProducts as $item name=products}
 
             <div class="col-md-4 col-sm-12 foto-item">
-              <img src="/images/products/{$item['image']}" width="100" alt="">
+              <img src="/images/products/{$item['image']}" width="inherit" height="inherit" alt="">
               <a href="/product/{$item['id']}/">{$item['name']}</a>
             </div>
 
