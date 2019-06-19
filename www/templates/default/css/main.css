@@ -27,14 +27,12 @@ h3 {
 }
 .foto-item {
 	border: 1px solid grey;
-	height: 30%;
-	width: 30%;
 	margin: .75rem 0;
 }
 .foto-item img {
 	display: block;
-	width: 20%;
-	height: 30%;
+	height: 100px;
+	width: 90px;
 	margin: 0 auto;
 	margin-bottom: .75rem;
 }

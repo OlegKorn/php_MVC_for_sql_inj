@@ -1,8 +1,12 @@
+<!--HEDER TPL-->
+<!--HEDER TPL-->
+<!--HEDER TPL-->
+
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -10,6 +14,13 @@
     <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css">
     <link rel="stylesheet" href="{$templateWebPath}css/reset.css" type="text/css">
 
-    <title>Hello, world!</title>
+    <title>{$pageTitle}</title>
   </head>
   
+  <body>
+
+    {include file='left.tpl'}
+
+    <!--END HEDER TPL-->
+    <!--END HEDER TPL-->
+    <!--END HEDER TPL-->

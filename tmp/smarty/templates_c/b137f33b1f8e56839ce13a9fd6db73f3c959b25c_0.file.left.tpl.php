@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-18 03:01:36
+/* Smarty version 3.1.33, created on 2019-06-19 17:06:46
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0837f0dd5b98_28167302',
+  'unifunc' => 'content_5d0a4f8677a056_07617274',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1560819695,
+      1 => 1560956801,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0837f0dd5b98_28167302 (Smarty_Internal_Template $_smarty_tpl) {
-?><body>
+function content_5d0a4f8677a056_07617274 (Smarty_Internal_Template $_smarty_tpl) {
+?><!--LEFT TPL-->
+<!--LEFT TPL-->
+<!--LEFT TPL-->
 
     <section>
       <div id="main" class="container-fluid">
@@ -38,7 +40,8 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
                   <li>
-                    <a class="nav-link bold" href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                    <a class="nav-link bold" href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a>
 
                     <?php if (isset($_smarty_tpl->tpl_vars['item']->value['children'])) {?>
@@ -49,7 +52,8 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->value) {
 ?>
                           <li class="nav-item">
-                            <a class="nav-link" href="#"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+                            <a class="nav-link" href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['itemChild']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
 </a><br/>
                           </li>
                       <?php
@@ -102,5 +106,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </div>
           </div>
-<?php }
+
+<!--END LEFT TPL-->
+<!--END LEFT TPL-->
+<!--END LEFT TPL--><?php }
 }

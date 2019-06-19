@@ -1,4 +1,6 @@
-<body>
+<!--LEFT TPL-->
+<!--LEFT TPL-->
+<!--LEFT TPL-->
 
     <section>
       <div id="main" class="container-fluid">
@@ -11,13 +13,13 @@
                 
                 {foreach $rsCategories as $item}
                   <li>
-                    <a class="nav-link bold" href="#">{$item['name']}</a>
+                    <a class="nav-link bold" href="/?controller=category&id={$item['id']}">{$item['name']}</a>
 
                     {if isset($item['children'])}
 
                       {foreach $item['children'] as $itemChild}
                           <li class="nav-item">
-                            <a class="nav-link" href="#">{$itemChild['name']}</a><br/>
+                            <a class="nav-link" href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a><br/>
                           </li>
                       {/foreach}
 
@@ -63,3 +65,7 @@
 
             </div>
           </div>
+
+<!--END LEFT TPL-->
+<!--END LEFT TPL-->
+<!--END LEFT TPL-->

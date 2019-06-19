@@ -1,31 +1,36 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-13 08:21:12
+/* Smarty version 3.1.33, created on 2019-06-19 14:06:55
   from '/opt/lampp/htdocs/site.local/views/default/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d01eb58cd4c20_91839340',
+  'unifunc' => 'content_5d0a255f78a992_27131638',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '71461cdb359137b3aea90ffdef1ad67f55670d6a' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/header.tpl',
-      1 => 1560406871,
+      1 => 1560945858,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:left.tpl' => 1,
   ),
 ),false)) {
-function content_5d01eb58cd4c20_91839340 (Smarty_Internal_Template $_smarty_tpl) {
-?><!doctype html>
+function content_5d0a255f78a992_27131638 (Smarty_Internal_Template $_smarty_tpl) {
+?><!--HEDER TPL-->
+<!--HEDER TPL-->
+<!--HEDER TPL-->
+
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -35,7 +40,16 @@ css/main.css" type="text/css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 css/reset.css" type="text/css">
 
-    <title>Hello, world!</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
+</title>
   </head>
-  <?php }
+  
+  <body>
+
+    <?php $_smarty_tpl->_subTemplateRender('file:left.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    <!--END HEDER TPL-->
+    <!--END HEDER TPL-->
+    <!--END HEDER TPL--><?php }
 }

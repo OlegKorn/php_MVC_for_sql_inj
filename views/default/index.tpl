@@ -1,16 +1,19 @@
+<!--INDEX TPL-->
+<!--INDEX TPL-->
+<!--INDEX TPL-->
+
       <div class="col-md-8 col-sm-12">
         <div id="center" class="col-12 text-center">
           <h1 class="text-center">my shop</h1>
 
-      
-
-          <!--FOTOS ITEMS-->
           <div class="row text-center foto-items">
 
           {foreach $rsProducts as $item name=products}
 
             <div class="col-md-4 col-sm-12 foto-item">
-              <img src="/images/products/{$item['image']}" width="inherit" height="inherit" alt="">
+              <a href="/product/{$item['id']}/">
+                <img src="/images/products/{$item['image']}"   alt="{$item['image']}">
+              </a>
               <a href="/product/{$item['id']}/">{$item['name']}</a>
             </div>
 
@@ -21,9 +24,6 @@
         </div>
       </div>
     </section>
-    
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -32,3 +32,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!--END INDEX TPL-->
+<!--END INDEX TPL-->
+<!--END INDEX TPL-->

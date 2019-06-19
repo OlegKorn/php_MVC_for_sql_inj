@@ -1,11 +1,11 @@
 <?php
 
-  $dblocation = "localhost";
-  $dbname = "LOCAL.SHOP";
-  $dbuser = "root";
-  $dbpasswd = "oleg1811";
+  //$dblocation = "localhost";
+  //$dbname = "LOCAL.SHOP";
+  //$dbuser = "root";
+  //$dbpasswd = "oleg1811";
 
-  $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
+  //$db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
 
   /**
   *Get main categories linked to children ones
@@ -20,10 +20,16 @@
     $dbpasswd = "oleg1811";
 
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
+    $db->set_charset("utf8"); 
 
     $sql = "SELECT * FROM categories WHERE parent_id = {$catId}";
 
     $rs = mysqli_query($db, $sql); 
+
+    
+    //
+    $db->close();
+    //
 
     return createSmartyRsArray($rs);  
   }
@@ -41,8 +47,9 @@
     $dbpasswd = "oleg1811";
 
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
+    $db->set_charset("utf8"); 
 
-  	$sql = 'SELECT * FROM categories WHERE parent_id=0';
+  	$sql = "SELECT * FROM categories WHERE parent_id=0";
 
     $rs = mysqli_query($db, $sql);
     $smartyRs = array();
@@ -59,5 +66,30 @@
     } 
 
     return $smartyRs;
+  }
 
+  
+
+  function getCatById($catId) {
+
+  	$catId = intval($catId);
+
+  	$sql = "SELECT * FROM categories WHERE id = '{$catId}'";
+
+    $dblocation = "localhost";
+    $dbname = "LOCAL.SHOP";
+    $dbuser = "root";
+    $dbpasswd = "oleg1811";
+
+    $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
+    $db->set_charset("utf8"); 
+
+    $rs = mysqli_query($db, $sql);
+
+
+    //
+    $db->close();
+    //
+
+    return mysqli_fetch_assoc($rs);
   }
