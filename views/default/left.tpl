@@ -11,13 +11,14 @@
             <ul class="nav flex-column">
               
               {foreach $rsCategories as $item}
+              
               <li>
-                <a class="nav-link bold" href="#">{$item['name']}</a>
+                <a class="nav-link bold" href="/?controller=category&id={$item['id']}">{$item['name']}</a>
               </li>
 
               {if isset($item['children'])}
                 {foreach $item['children'] as $itemChild}
-                  <a href="#">{$itemChild['name']}</a> 
+                  <a href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a> 
                 {/foreach}
               {/if}
 

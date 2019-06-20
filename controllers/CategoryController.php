@@ -10,12 +10,10 @@ function indexAction($smarty) {
   $catId = isset($_GET['id']) ? $_GET['id'] : null;
   if (!$catId) exit();
 
- //$rsProducts = null;
+  //$rsProducts = null;
   //$rsChildCats = null;
 
-
   $rsCategory = getCatById($catId);
-
 
   if ($rsCategory['parent_id'] == 0) {
   	$rsChildCats = getChildrenForCat($catId);
@@ -23,8 +21,6 @@ function indexAction($smarty) {
   else {
   	$rsProducts = getProductsByCat($catId);
   }
-  d($rsChildCats);
-
 
   $rsCategories = getAllMainCatsWithChildren();
 
