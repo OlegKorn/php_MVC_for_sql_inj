@@ -7,32 +7,27 @@
         <h2>Товары категории {$rsCategory['name']}</h2>
         <div class="row text-center foto-items">
 	    
-	      
-
-        {foreach $rsProducts as $item name=products}
-
-          {if $rsProducts}
-
-            <div class="col-md-4 col-sm-12 foto-item">
-              <a href="/product/{$item['id']}/"
-                <img src="/images/products/{$item['image']}">
-              </a>
-              <a href="/product/{$item['id']}/">{$item['name']}</a>
-            </div>
-
-          {elseif !$rsProducts}
-          dfdsfs
-          {/if}
-   
+ 	      {foreach $rsProducts as $item name=products}
+          <div class="col-md-4 col-sm-12 foto-item">
+            <a href="/product/{$item['id']}"
+              <img src="/images/products/{$item['image']}">
+            </a>
+            <a href="/product/{$item['id']}/">{$item['name']}</a>
+          </div>
         {/foreach}
 
         {foreach $rsChildCats as $item name=childCats}
-          <h2><a href="/category/{$item['id']}/">{$item['name']}</a></h2>
+        <div class="col-md-12 col-sm-12">
+          <h4><a href="/category/{$item['id']}/">{$item['name']}</a></h4><br/>
+        </div>
         {/foreach}
 
         </div>
-	    </div>
+      </div>
     </div>
+
+
+
 
 
 

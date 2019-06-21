@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 14:59:45
+/* Smarty version 3.1.33, created on 2019-06-21 15:20:49
   from '/opt/lampp/htdocs/site.local/views/default/category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0cd4c1d95c31_15875051',
+  'unifunc' => 'content_5d0cd9b153a8a3_33025312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '74bc60fa8cab658cfac2fc73cd238bc908dd5362' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/category.tpl',
-      1 => 1561121984,
+      1 => 1561123248,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0cd4c1d95c31_15875051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0cd9b153a8a3_33025312 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!--CATEGORY TPL-->
 <!--CATEGORY TPL-->
 <!--CATEGORY TPL-->
@@ -31,32 +31,22 @@ function content_5d0cd4c1d95c31_15875051 (Smarty_Internal_Template $_smarty_tpl)
 </h2>
         <div class="row text-center foto-items">
 	    
-	      
-
-        <?php
+ 	      <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsProducts']->value, 'item', false, NULL, 'products', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-
-          <?php if ($_smarty_tpl->tpl_vars['rsProducts']->value) {?>
-
-            <div class="col-md-4 col-sm-12 foto-item">
-              <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"
-                <img src="/images/products/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+          <div class="col-md-4 col-sm-12 foto-item">
+            <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"
+              <img src="/images/products/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 ">
-              </a>
-              <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+            </a>
+            <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a>
-            </div>
-
-          <?php } elseif (!$_smarty_tpl->tpl_vars['rsProducts']->value) {?>
-          dfdsfs
-          <?php }?>
-   
+          </div>
         <?php
 }
 }
@@ -68,17 +58,22 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-          <h2><a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+        <div class="col-md-12 col-sm-12">
+          <h4><a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-</a></h2>
+</a></h4><br/>
+        </div>
         <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
         </div>
-	    </div>
+      </div>
     </div>
+
+
+
 
 
 
