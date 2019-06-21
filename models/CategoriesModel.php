@@ -22,13 +22,13 @@
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
     $db->set_charset("utf8"); 
 
-    $sql = "SELECT * FROM categories WHERE parent_id = {$catId}";
+    $sql = "SELECT * FROM categories WHERE parent_id = $catId";
 
-    $rs = mysqli_query($db, $sql); 
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql); 
 
     
     //
-    $db->close();
+    //$db->close();
     //
 
     return createSmartyRsArray($rs);  
@@ -51,7 +51,7 @@
 
   	$sql = "SELECT * FROM categories WHERE parent_id=0";
 
-    $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
     $smartyRs = array();
 
     while($row = mysqli_fetch_assoc($rs)) {
@@ -63,6 +63,7 @@
       }
       	
       $smartyRs[] = $row;
+      
     } 
 
     return $smartyRs;
@@ -74,7 +75,7 @@
 
   	$catId = intval($catId);
 
-  	$sql = "SELECT * FROM categories WHERE id = '{$catId}'";
+  	$sql = "SELECT * FROM categories WHERE id = $catId";
 
     $dblocation = "localhost";
     $dbname = "LOCAL.SHOP";
@@ -84,7 +85,7 @@
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
     $db->set_charset("utf8"); 
 
-    $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
 
 
     //

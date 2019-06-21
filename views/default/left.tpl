@@ -11,7 +11,7 @@
             <ul class="nav flex-column">
               
               {foreach $rsCategories as $item}
-              
+
               <li>
                 <a class="nav-link bold" href="/?controller=category&id={$item['id']}">{$item['name']}</a>
               </li>

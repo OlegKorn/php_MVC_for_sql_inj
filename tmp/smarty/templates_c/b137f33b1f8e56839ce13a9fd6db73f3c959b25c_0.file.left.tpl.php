@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-20 17:56:37
+/* Smarty version 3.1.33, created on 2019-06-20 18:39:37
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0bacb50b9cb0_12055050',
+  'unifunc' => 'content_5d0bb6c9b8fdf3_69481648',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1561046195,
+      1 => 1561048659,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0bacb50b9cb0_12055050 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0bb6c9b8fdf3_69481648 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!--LEFT TPL-->
   <!--LEFT TPL-->
   <!--LEFT TPL-->
@@ -38,7 +38,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-              
+
               <li>
                 <a class="nav-link bold" href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>

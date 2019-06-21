@@ -15,10 +15,10 @@ function getLastProducts($limit=null) {
     $sql = "SELECT * FROM products ORDER BY id DESC";
 
     if ($limit) {
-    	$sql .= " LIMIT {$limit}";
+    	$sql .= " LIMIT $limit";
     }
 
-    $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);
 
 
     //
@@ -42,9 +42,9 @@ function getProductsByCat($itemId) {
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
     $db->set_charset("utf8"); 
 
-    $sql = "SELECT * FROM products WHERE category_id = {'$itemId'}";
+    $sql = "SELECT * FROM products WHERE category_id = $itemId";
 
-    $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);
 
     //
     $db->close();
@@ -70,7 +70,7 @@ function getProductBiId($itemId) {
 
     $sql = "SELECT * FROM products WHERE id = {'$itemId'}";
 
-    $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);;
 
 
     //

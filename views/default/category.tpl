@@ -4,16 +4,25 @@
 
     <div class="col-md-8 col-sm-12">
       <div id="center" class="col-12 text-center">
+        <h2>Товары категории {$rsCategory['name']}</h2>
+        <div class="row text-center foto-items">
 	    
-	    <h2>Товары категории {$rsCategory['name']}</h2>
+	      
 
-        
         {foreach $rsProducts as $item name=products}
-  
-            <a href="/product/{$item['id']}/"
-              <img src="/images/products/{$item['image']}">
-            </a>
-            <a href="/product/{$item['id']}/">{$item['name']}</a>
+
+          {if $rsProducts}
+
+            <div class="col-md-4 col-sm-12 foto-item">
+              <a href="/product/{$item['id']}/"
+                <img src="/images/products/{$item['image']}">
+              </a>
+              <a href="/product/{$item['id']}/">{$item['name']}</a>
+            </div>
+
+          {elseif !$rsProducts}
+          dfdsfs
+          {/if}
    
         {/foreach}
 
@@ -22,8 +31,10 @@
         {/foreach}
 
         </div>
-	  </div>
+	    </div>
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
