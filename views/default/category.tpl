@@ -9,9 +9,7 @@
 	    
  	      {foreach $rsProducts as $item name=products}
           <div class="col-md-4 col-sm-12 foto-item">
-            <a href="/product/{$item['id']}"
-              <img src="/images/products/{$item['image']}">
-            </a>
+            <a href="/product/{$item['id']}/"><img src="/images/products/{$item['image']}"/></a>
             <a href="/product/{$item['id']}/">{$item['name']}</a>
           </div>
         {/foreach}
