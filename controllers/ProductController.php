@@ -5,14 +5,20 @@ include_once '../models/CategoriesModel.php';
 
 
 
-
 function indexAction($smarty) {
 
 	$itemId = isset($_GET['id']) ? $_GET['id'] : null;
+
 	if(!$itemId) exit();
 
 	$rsProduct = getProductById($itemId);
+
 	$rsCategories = getAllMainCatsWithChildren();
+
+    $smarty->assign('itemInCart', 0);
+    if (in_array($itemId, $_SESSION['cart'])) {
+   	  $smarty->assign('itemInCart', 1);
+    }
 
 	$smarty->assign('pageTitle', '');
 	$smarty->assign('rsCategories', $rsCategories);

@@ -18,6 +18,7 @@ function addToCart(itemId) {
 			}
 		}
     });
+    return false
 }
 
 function removeFromCart(itemId) {
@@ -38,4 +39,5 @@ function removeFromCart(itemId) {
 			}
 		}
     });
+    return false
 }

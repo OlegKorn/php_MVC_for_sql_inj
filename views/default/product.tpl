@@ -13,7 +13,7 @@
             
             <a id="removeCart_{$rsProduct['id']}" href="#" onClick="removeFromCart({$rsProduct['id']}); return false;" class="cart-styled styled" alt="Удалить из корзины">Удалить из корзины</a>
 
-            <a id="addCart_{$rsProduct['id']}" href="#" onClick="addToCart({$rsProduct['id']}); return false;" class="cart-styled styled" alt="Добавить в корзину">Добавить в корзину</a>
+            <a id="addCart_{$rsProduct['id']}" {if ! $itemInCart} class="cart-styled styled" {/if} href="#" onClick="addToCart({$rsProduct['id']}); return false;" {if $itemInCart} class="hideme cart-styled styled" {/if} class="cart-styled styled" alt="Добавить в корзину">Добавить в корзину</a>
             <p class="descr">Описание: {$rsProduct['description']}</p>
           </div>
         </div>
