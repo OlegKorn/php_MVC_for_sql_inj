@@ -45,6 +45,7 @@ strong {
 
 /*https://css-tricks.com/having-fun-with-link-hover-effects/*/
 .styled {
+  margin: .15rem 0;
   background:
      linear-gradient(
        to right,
@@ -85,4 +86,8 @@ input {
 
 .item {
 	margin: 1.5rem 0;
+}
+
+.cart-styled {
+	margin: 0 1rem;
 }

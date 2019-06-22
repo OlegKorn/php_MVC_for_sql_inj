@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-22 06:25:50
+/* Smarty version 3.1.33, created on 2019-06-22 13:06:25
   from '/opt/lampp/htdocs/site.local/views/default/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0dadce2816e5_79797132',
+  'unifunc' => 'content_5d0e0bb18ff930_27187415',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df161affd8c84a10eb8671c41cfaa9d4ccc20e62' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/index.tpl',
-      1 => 1561177528,
+      1 => 1561201378,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0dadce2816e5_79797132 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0e0bb18ff930_27187415 (Smarty_Internal_Template $_smarty_tpl) {
 ?>       <!--INDEX TPL-->
         <!--INDEX TPL-->
         <!--INDEX TPL-->
@@ -59,17 +59,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </div>
     </section>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
->
+
   </body>
 </html>
 <!--END INDEX TPL-->

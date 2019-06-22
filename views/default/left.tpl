@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-4 col-sm-12">
           <div id="left" class="col-12 text-center">
-            <h3>Меню сайта</h3>
+            <a class="styled" href="site.local/index.php">Home</a>
             
             <ul class="nav flex-column">
               
@@ -24,10 +24,6 @@
 
               {/foreach}
 
-              <li>
-                <a class="nav-link bold styled" href="site.local/index.php">Home</a>
-              </li>
-
             </ul>
 
             <form>
@@ -42,7 +38,11 @@
             </form>
 
             <strong><a href="#">Регистрация</a></strong>
-              <p class="cart-info"><a href="#">В корзине </a><span>пусто</span></p>
+            <br/>
+              <a href="/cart/" title="Перейти в корзину" class="cart-info"><a href="#">В корзине </a>
+              <span id="cartCntItems">
+              {if {$cartCntItems} > 0} {$cartCntItems} {else} пусто {/if}
+              </span></p>
           </div>
         </div>
         <!--END LEFT TPL-->

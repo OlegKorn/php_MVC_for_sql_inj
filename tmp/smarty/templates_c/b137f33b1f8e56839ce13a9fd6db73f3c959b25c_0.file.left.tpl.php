@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-22 04:07:35
+/* Smarty version 3.1.33, created on 2019-06-22 13:34:09
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0d8d6703b3a3_33725200',
+  'unifunc' => 'content_5d0e1231b393d2_11981585',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1561169254,
+      1 => 1561203244,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0d8d6703b3a3_33725200 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0e1231b393d2_11981585 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!--LEFT TPL-->
   <!--LEFT TPL-->
   <!--LEFT TPL-->
@@ -29,7 +29,7 @@ function content_5d0d8d6703b3a3_33725200 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row">
         <div class="col-md-4 col-sm-12">
           <div id="left" class="col-12 text-center">
-            <h3>Меню сайта</h3>
+            <a class="styled" href="site.local/index.php">Home</a>
             
             <ul class="nav flex-column">
               
@@ -65,10 +65,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
-              <li>
-                <a class="nav-link bold styled" href="site.local/index.php">Home</a>
-              </li>
-
             </ul>
 
             <form>
@@ -83,7 +79,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </form>
 
             <strong><a href="#">Регистрация</a></strong>
-              <p class="cart-info"><a href="#">В корзине </a><span>пусто</span></p>
+            <br/>
+              <a href="/cart/" title="Перейти в корзину" class="cart-info"><a href="#">В корзине </a>
+              <span id="cartCntItems">
+              <?php ob_start();
+echo $_smarty_tpl->tpl_vars['cartCntItems']->value;
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1 > 0) {?> <?php echo $_smarty_tpl->tpl_vars['cartCntItems']->value;?>
+ <?php } else { ?> пусто <?php }?>
+              </span></p>
           </div>
         </div>
         <!--END LEFT TPL-->
