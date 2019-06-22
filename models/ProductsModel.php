@@ -18,8 +18,7 @@ function getLastProducts($limit=null) {
     	$sql .= " LIMIT $limit";
     }
 
-    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);
-
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
 
     //
     $db->close();
@@ -44,7 +43,7 @@ function getProductsByCat($itemId) {
 
     $sql = "SELECT * FROM products WHERE category_id = $itemId";
 
-    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
 
     //
     $db->close();
@@ -56,7 +55,7 @@ function getProductsByCat($itemId) {
 
 
 
-function getProductBiId($itemId) {
+function getProductById($itemId) {
     
     $itemId = intval($itemId);
 
@@ -68,15 +67,15 @@ function getProductBiId($itemId) {
 
     $db->set_charset("utf8"); 
 
-    $sql = "SELECT * FROM products WHERE id = {'$itemId'}";
+    $sql = "SELECT * FROM products WHERE id = $itemId";
 
-    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs)." in ".$sql);;
-
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
 
     //
     $db->close();
     //
-
     return mysqli_fetch_assoc($rs);
 }
+
+
 ?>

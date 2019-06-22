@@ -13,16 +13,20 @@
               {foreach $rsCategories as $item}
 
               <li>
-                <a class="nav-link bold" href="/?controller=category&id={$item['id']}">{$item['name']}</a>
+                <a class="nav-link bold styled" href="/?controller=category&id={$item['id']}">{$item['name']}</a>
               </li>
 
               {if isset($item['children'])}
                 {foreach $item['children'] as $itemChild}
-                  <a href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a> 
+                  <a class="styled" href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a> 
                 {/foreach}
               {/if}
 
               {/foreach}
+
+              <li>
+                <a class="nav-link bold styled" href="site.local/index.php">Home</a>
+              </li>
 
             </ul>
 

@@ -3,6 +3,9 @@
 include_once '../models/ProductsModel.php';
 include_once '../models/CategoriesModel.php';
 
+
+
+
 function indexAction($smarty) {
 
 	$itemId = isset($_GET['id']) ? $_GET['id'] : null;
