@@ -44,4 +44,20 @@ function removefromcartAction() {
   echo json_encode($resData);
 }
 
+
+
+function indexAction($smarty) {
+
+	$itemIds = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+
+	$rsCategories = getAllMainCatsWithChildren();
+	$rsProducts = getProductsFromArray($itemIds);
+
+	$smarty->assign('pageTitle', 'Корзина');
+	$smarty->assign('rsCategories', $rsCategories);
+	$smarty->assign('rsProducts', $rsProducts);
+
+	loadTemplate($smarty, 'header');
+	loadTemplate($smarty, 'cart');
+}
 ?>

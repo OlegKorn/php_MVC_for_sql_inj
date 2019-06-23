@@ -78,4 +78,27 @@ function getProductById($itemId) {
 }
 
 
+
+function getProductsFromArray($itemIds) {
+    
+    $strIds = implode($itemIds, ', ');
+    $dblocation = "localhost";
+    $dbname = "LOCAL.SHOP";
+    $dbuser = "root";
+    $dbpasswd = "oleg1811"; 
+    $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
+
+    $db->set_charset("utf8"); 
+
+    $sql = "SELECT * FROM products WHERE id in ($strIds)";
+
+    $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
+
+    //
+    $db->close();
+    //
+    return createSmartyRsArray($rs);
+}
+
+
 ?>

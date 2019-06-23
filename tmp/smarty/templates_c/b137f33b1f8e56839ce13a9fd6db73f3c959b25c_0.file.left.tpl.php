@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-22 13:34:09
+/* Smarty version 3.1.33, created on 2019-06-23 03:43:12
   from '/opt/lampp/htdocs/site.local/views/default/left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0e1231b393d2_11981585',
+  'unifunc' => 'content_5d0ed930061674_83894301',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b137f33b1f8e56839ce13a9fd6db73f3c959b25c' => 
     array (
       0 => '/opt/lampp/htdocs/site.local/views/default/left.tpl',
-      1 => 1561203244,
+      1 => 1561254190,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0e1231b393d2_11981585 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0ed930061674_83894301 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!--LEFT TPL-->
   <!--LEFT TPL-->
   <!--LEFT TPL-->
@@ -78,9 +78,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               <button type="submit">Submit</button>
             </form>
 
-            <strong><a href="#">Регистрация</a></strong>
+            <strong><a class="styled" href="#">Регистрация</a></strong>
             <br/>
-              <a href="/cart/" title="Перейти в корзину" class="cart-info"><a href="#">В корзине </a>
+              <a href="/cart/" title="Перейти в корзину"><a class="styled" href="/cart/">В корзине </a>
               <span id="cartCntItems">
               <?php ob_start();
 echo $_smarty_tpl->tpl_vars['cartCntItems']->value;

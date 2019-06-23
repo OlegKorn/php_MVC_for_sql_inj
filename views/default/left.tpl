@@ -37,9 +37,9 @@
               <button type="submit">Submit</button>
             </form>
 
-            <strong><a href="#">Регистрация</a></strong>
+            <strong><a class="styled" href="#">Регистрация</a></strong>
             <br/>
-              <a href="/cart/" title="Перейти в корзину" class="cart-info"><a href="#">В корзине </a>
+              <a href="/cart/" title="Перейти в корзину"><a class="styled" href="/cart/">В корзине </a>
               <span id="cartCntItems">
               {if {$cartCntItems} > 0} {$cartCntItems} {else} пусто {/if}
               </span></p>

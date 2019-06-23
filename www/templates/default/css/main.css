@@ -3,7 +3,11 @@
 }
 
 html, body {
-  background-color: #FFF;
+  background: #1B211B;
+}
+
+div, p, a {
+  color: #fff !important;
 }
 
 #main {
@@ -90,4 +94,11 @@ input {
 
 .cart-styled {
 	margin: 0 1rem;
+}
+
+.jumbotron {
+  background-color: #7F8BE8 !important;
+}
+.jumbotron * {
+  color: #000 !important;
 }
