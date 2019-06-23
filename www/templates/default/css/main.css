@@ -97,7 +97,7 @@ input {
 }
 
 .jumbotron {
-  background-color: #7F8BE8 !important;
+  background-image: linear-gradient(to right, #66f46b, #5cdd65, #54c75f, #4cb159, #459b52) !important;
 }
 .jumbotron * {
   color: #000 !important;
