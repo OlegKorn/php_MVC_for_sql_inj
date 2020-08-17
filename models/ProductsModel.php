@@ -8,6 +8,7 @@ function getLastProducts($limit=null) {
     $dbuser = "root";
     $dbname = "smarty";
     $dbpasswd = "";
+
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
 
     $db->set_charset("utf8"); 
@@ -29,7 +30,6 @@ function getLastProducts($limit=null) {
 
 
 
-
 function getProductsByCat($itemId) {
 	
 	$itemId = intval($itemId);
@@ -38,6 +38,7 @@ function getProductsByCat($itemId) {
     $dbuser = "root";
     $dbname = "smarty";
     $dbpasswd = "";
+
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
     $db->set_charset("utf8"); 
 
@@ -54,7 +55,6 @@ function getProductsByCat($itemId) {
 
 
 
-
 function getProductById($itemId) {
     
     $itemId = intval($itemId);
@@ -63,6 +63,7 @@ function getProductById($itemId) {
     $dbuser = "root";
     $dbname = "smarty";
     $dbpasswd = ""; 
+
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
 
     $db->set_charset("utf8"); 
@@ -86,6 +87,7 @@ function getProductsFromArray($itemIds) {
     $dbuser = "root";
     $dbname = "smarty";
     $dbpasswd = "";
+
     $db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
 
     $db->set_charset("utf8"); 
@@ -99,6 +101,3 @@ function getProductsFromArray($itemIds) {
     //
     return createSmartyRsArray($rs);
 }
-
-
-?>

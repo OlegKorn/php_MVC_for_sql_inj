@@ -23,5 +23,3 @@
   $smarty->assign('imgp', 'https://bankoboev.ru/storage/avatar/bankoboev.ru-782.jpg');
   $smarty->assign('imgH', '150');
   $smarty->assign('imgW', '200');
-
-?>

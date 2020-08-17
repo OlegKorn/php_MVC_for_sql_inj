@@ -1,17 +1,5 @@
 <?php
 
-  //$dblocation = "localhost";
-  //$dbname = "LOCAL.SHOP";
-  //$dbuser = "root";
-  //$dbpasswd = "oleg1811";
-
-  //$db = new mysqli($dblocation, $dbuser, $dbpasswd, $dbname);
-
-  /**
-  *Get main categories linked to children ones
-  *
-  */
-
   function getChildrenForCat($catId) {
 
   	$dblocation = "localhost";
@@ -25,7 +13,6 @@
     $sql = "SELECT * FROM categories WHERE parent_id = $catId";
 
     $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql); 
-
     
     //
     //$db->close();
@@ -86,7 +73,6 @@
     $db->set_charset("utf8"); 
 
     $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql);
-
 
     //
     $db->close();

@@ -14,6 +14,4 @@
     if($db->connect_errno) {
       die("Ошибка доступа к MySQL");
     }
-
   }
-
