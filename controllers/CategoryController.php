@@ -21,7 +21,9 @@ function indexAction($smarty) {
   $rsChildCats = getChildrenForCat($catId);
   //} 
   //else {
-  $rsProducts = getProductsByCat($catId);
+  $rsProducts = getProductsByCat($catId)[0];
+  $sql = getProductsByCat($catId)[1];
+  echo $sql;
   //}
 
   $rsCategories = getAllMainCatsWithChildren();

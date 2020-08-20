@@ -3,11 +3,11 @@
 }
 
 html, body {
-  background: #1B211B;
+  background: #fff;
 }
 
 div, p, a {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 #main {
@@ -101,4 +101,8 @@ input {
 }
 .jumbotron * {
   color: #000 !important;
+}
+img {
+  height: 4rem;
+  width: 4rem;
 }

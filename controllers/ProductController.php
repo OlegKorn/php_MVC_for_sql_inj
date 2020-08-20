@@ -11,7 +11,9 @@ function indexAction($smarty) {
 
 	if(!$itemId) exit();
 
-	$rsProduct = getProductById($itemId);
+	$rsProduct = getProductById($itemId)[0];
+    $sql = getProductById($itemId)[1];
+    echo $sql;
 
 	$rsCategories = getAllMainCatsWithChildren();
 

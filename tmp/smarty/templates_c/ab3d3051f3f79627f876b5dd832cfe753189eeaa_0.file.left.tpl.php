@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-08-17 10:26:27
+/* Smarty version 3.1.33, created on 2020-08-18 01:59:21
   from 'G:\XAMPP\htdocs\smar\views\default\left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f3a3f33b1d4d5_67688563',
+  'unifunc' => 'content_5f3b19d9ac7b39_77383773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab3d3051f3f79627f876b5dd832cfe753189eeaa' => 
     array (
       0 => 'G:\\XAMPP\\htdocs\\smar\\views\\default\\left.tpl',
-      1 => 1597651836,
+      1 => 1597708760,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f3a3f33b1d4d5_67688563 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f3b19d9ac7b39_77383773 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!--LEFT TPL-->
   <!--LEFT TPL-->
   <!--LEFT TPL-->
   <section>
     <div id="main" class="container-fluid">
       <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
           <div id="left" class="col-12 text-center">
-            <a class="styled" href="site.local/index.php">Home</a>
+            <a class="styled" href="/index.php">Home</a>
             
             <ul class="nav flex-column">
               

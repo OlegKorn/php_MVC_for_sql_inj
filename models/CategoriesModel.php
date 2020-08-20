@@ -1,5 +1,10 @@
 <?php
 
+  // activate reporting
+  // http://docs.php.net/manual/en/mysqli-driver.report-mode.php
+  $driver = new mysqli_driver();
+  $driver->report_mode = (MYSQLI_REPORT_ERROR);//MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
   function getChildrenForCat($catId) {
 
   	$dblocation = "localhost";
@@ -11,7 +16,6 @@
     $db->set_charset("utf8"); 
 
     $sql = "SELECT * FROM categories WHERE parent_id = $catId";
-
     $rs = mysqli_query($db, $sql) or trigger_error(mysqli_error($rs) . " in " . $sql); 
     
     //

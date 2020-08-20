@@ -51,6 +51,7 @@ function indexAction($smarty) {
 	$itemIds = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 
 	$rsCategories = getAllMainCatsWithChildren();
+    
 	$rsProducts = getProductsFromArray($itemIds);
 
 	$smarty->assign('pageTitle', 'Корзина');

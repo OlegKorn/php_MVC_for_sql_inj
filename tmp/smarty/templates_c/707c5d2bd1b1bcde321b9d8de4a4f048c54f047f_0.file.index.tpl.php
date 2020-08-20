@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-08-17 10:26:27
+/* Smarty version 3.1.33, created on 2020-08-18 01:58:01
   from 'G:\XAMPP\htdocs\smar\views\default\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f3a3f33bd41d0_43751269',
+  'unifunc' => 'content_5f3b1989b45b75_52279784',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '707c5d2bd1b1bcde321b9d8de4a4f048c54f047f' => 
     array (
       0 => 'G:\\XAMPP\\htdocs\\smar\\views\\default\\index.tpl',
-      1 => 1597651836,
+      1 => 1597708679,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f3a3f33bd41d0_43751269 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f3b1989b45b75_52279784 (Smarty_Internal_Template $_smarty_tpl) {
 ?>       <!--INDEX TPL-->
         <!--INDEX TPL-->
         <!--INDEX TPL-->
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-9 col-sm-12">
           <div id="center" class="col-12 text-center">
             <h1 class="text-center">my shop</h1>
             <div class="row text-center">
@@ -36,7 +36,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
             
-              <div class="col-md-4 col-sm-12 item">
+              <div class="col-md-3 col-sm-12 item">
                 <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /">
                   <img class="img-thumbnail" src="/images/products/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>

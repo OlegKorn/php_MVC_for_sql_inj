@@ -4,9 +4,9 @@
   <section>
     <div id="main" class="container-fluid">
       <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
           <div id="left" class="col-12 text-center">
-            <a class="styled" href="site.local/index.php">Home</a>
+            <a class="styled" href="/index.php">Home</a>
             
             <ul class="nav flex-column">
               

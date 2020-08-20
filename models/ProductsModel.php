@@ -25,7 +25,7 @@ function getLastProducts($limit=null) {
     $db->close();
     //
 
-    return createSmartyRsArray($rs);
+    return array(createSmartyRsArray($rs), $sql);
 }
 
 
@@ -50,7 +50,7 @@ function getProductsByCat($itemId) {
     $db->close();
     //
     
-    return createSmartyRsArray($rs);
+    return array(createSmartyRsArray($rs), $sql);
 }
 
 
@@ -75,7 +75,7 @@ function getProductById($itemId) {
     //
     $db->close();
     //
-    return mysqli_fetch_assoc($rs);
+    return array(mysqli_fetch_assoc($rs), $sql);
 }
 
 
